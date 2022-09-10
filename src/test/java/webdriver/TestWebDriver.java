@@ -3,6 +3,7 @@ package webdriver;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.*;
+import utils.system;
 
 import java.time.Duration;
 
@@ -12,7 +13,7 @@ public class TestWebDriver {
 
     @Test
     public void testChromeBrowser() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "d:/webdrivers/chrome/104/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", system.webDriverPath("chrome"));
         WebDriver driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
