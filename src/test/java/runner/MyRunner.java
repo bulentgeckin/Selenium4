@@ -6,8 +6,6 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 
-
-
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features="src/test/java/features"
@@ -15,10 +13,7 @@ import org.junit.runner.RunWith;
 		,dryRun=false
 		,monochrome=true
 		,tags= "@browser"
+		,plugin= {"pretty", "html:target/html/cucumber-default-report.html", "json:target/cucumber.json", "rerun:target/failed.txt"}
 		)
 
-public class myRunner {
-
-}
-
-//,plugin = {"pretty"}
+public class MyRunner {}

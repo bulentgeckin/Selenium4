@@ -1,3 +1,4 @@
+@test
 Feature: Test Browsers
 
 
@@ -9,4 +10,4 @@ Feature: Test Browsers
       | chrome  |
       | firefox |
       | edge    |
-      | safari  |
+#      | safari  |
