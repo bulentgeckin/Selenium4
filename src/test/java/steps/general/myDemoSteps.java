@@ -10,6 +10,8 @@ import webdriver.TestWebDrivers;
 import java.util.List;
 import java.util.Map;
 
+import static utils.BaseClass.*;
+
 public class myDemoSteps {
 
     public static Logger log = LogManager.getLogger(myDemoSteps.class.getName());
@@ -57,8 +59,18 @@ public class myDemoSteps {
                 String failMessage = browser + "browser not installed or browser name incorrect, check your browser parameter, supported browser: chrome, edge, firefox";
                 log.info(failMessage);
                 Assert.fail(failMessage);
-
-
         }
+    }
+
+    @Given("^User can navigate a web page as \"([^\"]*)\"$")
+    public void navigate_to_url(String url) throws Exception {
+
+        initializeWebDriver();
+
+        if (!url.contains("http"))
+            url = "http://"+url;
+
+        gotoWebPage(url);
+        closeWebDriver();
     }
 }

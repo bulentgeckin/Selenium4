@@ -15,8 +15,6 @@ public class ConfigsReader {
 			FileInputStream fis = new FileInputStream(filePath);
 			prop = new Properties();
 			prop.load(fis);
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

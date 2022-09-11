@@ -11,7 +11,7 @@ public class MySystem {
 
     public static String webDriverPath(String browser) {
 
-        String webDriverPath = currentProjectDirectory() + "/src/webDrivers/";
+        String webDriverPath = currentProjectDirectory() + "/src/test/resources/webDrivers/";
 
 
         switch (browser) {

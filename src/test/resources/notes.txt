@@ -1,0 +1,2 @@
+mvn test -Dcucumber.filter.tags="@sanity"
+mvn test -Dcucumber.filter.tags="@smoke and @sanity"

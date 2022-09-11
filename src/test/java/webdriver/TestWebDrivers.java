@@ -4,8 +4,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import utils.MySystem;
 import java.time.Duration;
+
+import static java.lang.System.setProperty;
+import static utils.MySystem.webDriverPath;
+
 
 public class TestWebDrivers {
 
@@ -24,7 +27,7 @@ public class TestWebDrivers {
 
 
     public static void testChromeBrowser() throws Exception {
-        System.setProperty("webdriver.chrome.driver", MySystem.webDriverPath("chrome"));
+        setProperty("webdriver.chrome.driver", webDriverPath("chrome"));
         WebDriver driver = new ChromeDriver();
         setTimeouts(driver);
         driver.get("https://www.google.com/");
@@ -33,7 +36,7 @@ public class TestWebDrivers {
 
 
     public static void testFireFoxBrowser() throws Exception {
-        System.setProperty("webdriver.gecko.driver", MySystem.webDriverPath("firefox"));
+        setProperty("webdriver.gecko.driver", webDriverPath("firefox"));
         WebDriver driver = new FirefoxDriver();
         setTimeouts(driver);
         driver.get("https://www.mozilla.org");
@@ -42,7 +45,7 @@ public class TestWebDrivers {
 
 
     public static void testEdgeBrowser() throws Exception {
-        System.setProperty("webdriver.edge.driver", MySystem.webDriverPath("edge"));
+        setProperty("webdriver.edge.driver", webDriverPath("edge"));
         WebDriver driver = new EdgeDriver();
         setTimeouts(driver);
         driver.get("https://www.microsoft.com");
