@@ -1,4 +1,3 @@
-@test
 Feature: Test Browsers
 
 
