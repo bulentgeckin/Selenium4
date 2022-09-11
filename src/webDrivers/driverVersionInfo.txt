@@ -1,0 +1,3 @@
+Chrome  : 105
+Edge    : 105
+Gecko   : geckodriver 0.31.0 (b617178ef491 2022-04-06 11:57 +0000)

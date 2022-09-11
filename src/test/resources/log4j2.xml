@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+
+    <Appenders>
+
+        <RollingFile name="File" filePattern="./logs/Testlogs-%d{yyyy-MM-dd-HH-mm-ssSSS}.log">
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+            <SizeBasedTriggeringPolicy size="5000" />
+        </RollingFile>
+
+
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </Console>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- just for specific package write package name -->
+
+        <!-- <Logger name="alpha.Demo" level="trace" additivity="false"> <AppenderRef
+            ref="File" /> </Logger> -->
+
+        <!-- global parameters -->
+        <Root level="trace">  <!-- all logs 'trace' / only 'error'> -->
+            <AppenderRef ref="File" />   <!--  'Console' / 'File' -->>
+            <AppenderRef ref="Console" />   <!--  'Console' / 'File' -->>
+        </Root>
+    </Loggers>
+
+</Configuration>
