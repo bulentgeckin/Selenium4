@@ -4,6 +4,7 @@ import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.Assert;
 import webdriver.TestWebDrivers;
 
 import java.util.List;
@@ -36,20 +37,26 @@ public class myDemoSteps {
 
             case ("chrome"):
                 TestWebDrivers.testChromeBrowser();
+                log.info(browser + "web browser ran successfully");
+
                 break;
 
             case ("firefox"):
                 TestWebDrivers.testFireFoxBrowser();
+                log.info(browser + "web browser ran successfully");
+
                 break;
 
             case ("edge"):
                 TestWebDrivers.testEdgeBrowser();
+                log.info(browser + "web browser ran successfully");
+
                 break;
 
-
             default:
-                System.err.println("Browser is not supported, check your parameter");
-                System.exit(0);
+                String failMessage = browser + "browser not installed or browser name incorrect, check your browser parameter, supported browser: chrome, edge, firefox";
+                log.info(failMessage);
+                Assert.fail(failMessage);
 
 
         }

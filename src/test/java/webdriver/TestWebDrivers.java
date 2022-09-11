@@ -1,14 +1,13 @@
 package webdriver;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import utils.MySystem;
-
 import java.time.Duration;
 
 public class TestWebDrivers {
+
 
     public static void setTimeouts(WebDriver driver) {
 
@@ -48,7 +47,7 @@ public class TestWebDrivers {
         setTimeouts(driver);
         driver.get("https://www.microsoft.com");
         driver.manage().window().fullscreen();
-        System.out.println("Tile       :" + driver.getTitle());
+        System.out.println("Title       :" + driver.getTitle());
         Thread.sleep(4000);
         driver.quit();
     }
