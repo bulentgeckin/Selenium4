@@ -30,10 +30,10 @@ public class BaseClass {
         String browser = ConfigsReader.getProperty("browser").toLowerCase();
 
         // Check Maven runtime options | mvn test -Dbrowser=<browser> |
-        String mavenOption = java.lang.System.getProperty("browser");
+        String mavenOption = System.getProperty("browser");
 
         if (!(mavenOption == null)) {
-            browser = java.lang.System.getProperty("browser");
+            browser = System.getProperty("browser");
             log.info("System Property  (browser)     :" + "[" + mavenOption + "]");
         }
 
@@ -84,7 +84,7 @@ public class BaseClass {
                 break;
 
             case "edge":
-                setProperty("webdriver.edge.driver", webDriverPath("edge"));
+                setProperty("webdriver.edge.driver", edgeDriver);
 
 
                 // to make the firefox browser totally silent

@@ -2,9 +2,9 @@ package utils;
 
 public class Constants {
 
-	public static final String USER_PATH = java.lang.System.getProperty("user.dir");
-	public static final String OS_NAME = java.lang.System.getProperty("os.name");
-	public static final String USER_NAME = java.lang.System.getProperty("user.name");
+	public static final String USER_PATH = System.getProperty("user.dir");
+	public static final String OS_NAME = System.getProperty("os.name");
+	public static final String USER_NAME = System.getProperty("user.name");
 
 	public static final String WEB_DRIVERS_PATH = USER_PATH + "/src/test/resources/webDrivers/";
 	public static final long PAGE_LOAD_TIME = 30;

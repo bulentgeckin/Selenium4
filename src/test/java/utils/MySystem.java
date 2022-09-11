@@ -4,7 +4,7 @@ public class MySystem {
 
     public static String currentProjectDirectory() {
 
-        return java.lang.System.getProperty("user.dir");
+        return System.getProperty("user.dir");
 
     }
 

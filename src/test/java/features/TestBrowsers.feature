@@ -16,6 +16,7 @@ Feature: Test Browsers
   Scenario Outline:User can navigate any provided url
     Given User can navigate a web page as "<url>"
     Examples:
-      | url                        |
-      | www.google.com             |
-      | www.microsoft.com          |
+      | url                             |
+      | www.google.com                  |
+      | www.microsoft.com               |
+      | www.fjlsakjflska59034854390.com |

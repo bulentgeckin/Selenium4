@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Map;
 
 import static utils.BaseClass.*;
+import static utils.CommonMethods.takeScreenshot;
 
 public class myDemoSteps {
 
@@ -63,14 +64,15 @@ public class myDemoSteps {
     }
 
     @Given("^User can navigate a web page as \"([^\"]*)\"$")
-    public void navigate_to_url(String url) throws Exception {
+    public void navigate_to_url(String url) {
 
         initializeWebDriver();
 
         if (!url.contains("http"))
-            url = "http://"+url;
+            url = "http://" + url;
 
         gotoWebPage(url);
+        takeScreenshot("test");
         closeWebDriver();
     }
 }
