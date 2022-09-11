@@ -14,7 +14,6 @@ import org.junit.runner.RunWith;
 		,glue = "steps"
 		,monochrome = false
 //		,tags = "@browser"
-//		,tags = "@dataTableDemo"
 		,dryRun = false
 		,plugin = {"pretty", "html:target/html/cucumber-default-report.html", "json:target/cucumber.json", "rerun:target/failed.txt"}
 )
