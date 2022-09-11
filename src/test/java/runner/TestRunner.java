@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
 		,monochrome = false
 //		,tags = "@browser"
 		,dryRun = false
-		,plugin = {"pretty", "html:target/html/cucumber-default-report.html", "json:target/cucumber.json", "rerun:target/failed.txt"}
+		,plugin = {"pretty", "html:target/cucumber-html-reports/cucumber-default-report.html", "json:target/cucumber.json", "rerun:target/failed.txt"}
 )
 
 public class TestRunner {}
