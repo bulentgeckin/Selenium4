@@ -1,4 +1,4 @@
-Feature: DataTableDemo
+Feature: Scenario Outline Demo
 
 
   @ScenarioOutlineDemo
